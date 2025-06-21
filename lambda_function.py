@@ -3,8 +3,8 @@ import requests
 from datetime import datetime, timedelta, timezone
 
 # 🔐 チャンネルアクセストークンとグループID（ここは必ず正しく！）
-CHANNEL_ACCESS_TOKEN = "XXXXXXX"
-GROUP_ID = "XXXXXXXX"
+CHANNEL_ACCESS_TOKEN = "XXXXXXX"    #発行したチャンネルアクセストークンを入力する
+GROUP_ID = "XXXXXXXX"    #発行したグループIDを入力する
 test_mode = False  # ← True にするといつでも通知される（デバッグ用）
 
 # 📤 LINEメッセージ送信関数
