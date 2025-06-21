@@ -3,8 +3,8 @@ import requests
 from datetime import datetime, timedelta, timezone
 
 # 🔐 チャンネルアクセストークンとグループID（ここは必ず正しく！）
-CHANNEL_ACCESS_TOKEN = "kohZWWr2pXza+CIl3AE8/Aeb4hBgQyMMBgAqlInQdiyBvRpCwuUuIyj4BUXjdw9aaNv8yXVt5nNGxWhzmQKrrVq1yeL1jsPADYcX1pFvH56Nv38k9Q406OJsTFylxwhBmRzfb6bfmg085i64+h38LQdB04t89/1O/w1cDnyilFU="
-GROUP_ID = "Cec6b711f1820a57b80b1031c6657cf9e"
+CHANNEL_ACCESS_TOKEN = "XXXXXXX"
+GROUP_ID = "XXXXXXXX"
 test_mode = False  # ← True にするといつでも通知される（デバッグ用）
 
 # 📤 LINEメッセージ送信関数
@@ -44,8 +44,8 @@ def lambda_handler(event, context):
     # ✅ 通知条件：1日 or 15日、もしくは test_mode=True のとき
     if test_mode or now.day in [1, 15]:
         message = (
-            f"おはようございます！☀今日は{today_str}で、レボリューション・デーです。\n"
-            "少しでも良いのでお題目をあげましょう～✨"
+            f"おはようございます！☀今日は{today_str}です。\n"
+            "今日もすてきな一日になりますように✨"
         )
         push_line_message(message)
     else:
