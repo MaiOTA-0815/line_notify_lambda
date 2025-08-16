@@ -81,7 +81,31 @@ to quietly deliver reminders and prayers to those I care about.
 I hope it brings gentle comfort into someone's daily life.
 
 ---
+## 📝 更新履歴 | Changelog
 
+- **2025-08-16**
+  - 🔐 **環境変数対応 | Environment Variables Support**  
+    - `CHANNEL_ACCESS_TOKEN`, `GROUP_ID`, `TEST_MODE` を Lambda 環境変数で管理するよう変更  
+    - 秘密情報をコードに直書きせず、セキュリティと柔軟性が向上  
+    - Moved sensitive values (`CHANNEL_ACCESS_TOKEN`, `GROUP_ID`, `TEST_MODE`) to Lambda environment variables  
+    - Improved security and flexibility by removing hardcoded secrets
+  - 🧪 **テストモード追加 | Test Mode**  
+    - `TEST_MODE=true` を設定すると日付に関係なく通知を送信可能（デバッグ用）  
+    - Added `TEST_MODE=true` option to send messages regardless of date (for debugging)  
+  - ⚙️ **デプロイ手順整理 | Deployment Improvements**  
+    - `function.zip` を `.gitignore` に追加し、不要な成果物をGitHubに含めないよう修正  
+    - Refined deployment process by ignoring `function.zip` build artifact in GitHub  
+    - `lambda_function.py` のロジック整理、ログ出力を改善  
+    - Simplified `lambda_function.py` logic and improved logging  
+
+- **2025-06-15**
+  - 🎉 **初回リリース | Initial Release**  
+    - AWS Lambda + EventBridge + LINE Messaging API を活用して、  
+      毎月 **1日と15日の朝9時** にLINEグループへ自動通知を送信するBotを実装  
+    - Implemented a bot using AWS Lambda + EventBridge + LINE Messaging API  
+      to automatically send notifications to a LINE group at **9:00 AM on the 1st and 15th of each month**
+
+---
 ## ⚠️ 注意事項 | Notes
 
 このリポジトリ内の `lambda_function.py` では、  
