@@ -2,12 +2,12 @@
 **LINE Notification Bot - Monthly Prayers Delivered Automatically**
 
 このプロジェクトは、**AWS Lambda** と **LINE Messaging API** を活用し、  
-毎月 **1日と15日の朝7時** に、LINEグループや個人へ**自動通知**を送信するBotです。
+毎月 **1日と15日の朝9時** に、LINEグループや個人へ**自動通知**を送信するBotです。
 
 > 忘れたくない、大切な想いを。そっと、やさしく届けます。
 
 This project is a LINE bot built using **AWS Lambda** and the **LINE Messaging API**.  
-It sends automatic notifications at **7:00 AM on the 1st and 15th of each month**,  
+It sends automatic notifications at **9:00 AM on the 1st and 15th of each month**,  
 gently delivering important messages to loved ones.
 
 ---
